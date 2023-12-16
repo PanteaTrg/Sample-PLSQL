@@ -1,0 +1,22 @@
+
+DECLARE
+
+  TYPE STUDENT IS TABLE OF NUMBER INDEX BY VARCHAR2(64);
+
+  STUDENT_AGE STUDENT;
+  I           VARCHAR2(64);
+
+BEGIN
+  STUDENT_AGE('PANTEA') := 28;
+  STUDENT_AGE('SHIDEH') := 54;
+  STUDENT_AGE('SOHEILA') := 65;
+  STUDENT_AGE('ALI') := 12;
+                       
+            I := STUDENT_AGE.FIRST;
+
+  WHILE I IS NOT NULL LOOP
+    DBMS_OUTPUT.PUT_LINE('AGE OF STUDENT  ' || I || ' IS ' ||
+                         STUDENT_AGE(I));
+    I := STUDENT_AGE.NEXT(I);
+  END LOOP;
+END;
