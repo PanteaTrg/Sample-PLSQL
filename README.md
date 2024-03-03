@@ -1,2 +1,2 @@
-# Sample-PLSQL-Query
-This is my first repository- Here you can find sample sql queries.
+# Sample-PLSQL
+Here are some practical plsql queries which we've used in different projects. 
